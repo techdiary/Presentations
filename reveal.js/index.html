@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="slide-out">
+					<h2 >Basic <b style="color:red">O</b>bject <b style="color: red">O</b>riented Approach</h2>
+				</section>
+				<section data-transition="fade-out">
+						<h3>The key ideas of the object oriented approach are : </h3>
+					<ol>
+						<li class="fragment fade-in">Objects</li>
+						<li class="fragment fade-in">Encapsulation</li>
+						<li class="fragment fade-in">Class and Inheritance</li>
+						<li class="fragment fade-in">Instance and Instantiation</li>
+						<li class="fragment fade-in">Methods and Messages</li>
+					</ol>
+				</section>
+				<section data-background-color="#f7ea38" data-transition="fade-out slide-out">
+					<h1 style="color: #e54e28; font-size: 58px"><u>Objects</u></h1>
+					<article>
+					<ul>
+						<li style="color: #f78800;font-size: 34px" class="fragment">On of the main principles in the object oriented (OO) approach is that of abstraction, not of data structures and processes separately but both together. An object is a set of data structures and the methods or operations needed to access those structures.</li>
+						<li style="color: #f78800; font-size: 34px" class="fragment">The objects in OO software are reusable components which may often be used in different applications. In OO environments, object libraries may be available for the programmer to build into solutions</li>
+					</ul>
+					</article>
+				</section>
+				<section>
+					<section data-background-color="#d9f9da" data-transition="fade-out slide-out">
+						<h1 style="color: #37b501; font-size: 58px"><u>Encapsulation</u></h1>
+						<ul>
+							<li style="color: #026805;font-size: 34px" class="fragment"><p style="color: #026805;font-size: 24px;">Encapsulation of data structures and methods means that only the methods associated with the object can access the internal data structures. An object is a packaged item of information including the processes which manipulate it. Although we saw above that it is possible to create such packages in e.g. C, the language did not specifically support or enforce the encapsulation</li>
+						</ul>					
+					</section>
+					<section>
+							<section data-background-color="#d9f9da" data-transition="fade-out slide-out">
+								<pre><code style="font-size: 18px; margin-bottom: 5px; padding-bottom: 5px" data-trim data-noescape>
+									struct Address{
+								    
+								      private:
+								          
+								         unsigned char streetNumber;
+								         char*         cityName;
+								         char*         streetName;
+								         char*         country;
+								         char          postcode[7];
+
+								      public:
+								         
+								         void initAddress(unsigned snumber, char* sname, char* cname,
+								                          char* scountry, char* pcode};
+								         void deleteAddress();
+								         void streetAddress(char* name);
+								         void cityAddress(char* name);
+
+									};
+								</code></pre>
+								<p style="color: #ffffff;font-size: 34px">Here is an example of encapsulation in C++. The data items are private and no external functions can access them, only the methods defined in the object. The methods, initAddress etc, are public and so can be used outside the object.</p>
+							</section>	
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
